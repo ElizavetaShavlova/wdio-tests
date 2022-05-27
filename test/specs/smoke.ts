@@ -1,3 +1,5 @@
+import { isPropertyAssignment } from "typescript";
+
 describe('Website', () => {
     it('should be alive', () => {
         browser.url(`/`)
