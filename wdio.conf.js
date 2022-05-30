@@ -17,7 +17,7 @@ exports.config = {
     // Level of logging verbosity: trace | debug | info | warn | error | silent
     logLevel: 'info',
     bail: 0,
-    baseUrl: 'https://www.litecart.net/ru/',
+    baseUrl: 'https://www.litecart.net/en/',
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
     // Default timeout in milliseconds for request if browser driver or grid doesn't send response
@@ -33,7 +33,8 @@ exports.config = {
     // Options to be passed to Mocha.
     mochaOpts: {
         ui: 'bdd',
-        timeout: 60000
+        //timeout of one "it":
+        timeout: 60000 
     },
     // Hooks
     /**
@@ -93,25 +94,6 @@ exports.config = {
      * Hook that gets executed before the suite starts
      * @param {Object} suite suite details
      */
-    // beforeSuite: function (suite) {
-    // },
-    /**
-     * Function to be executed before a test (in Mocha/Jasmine) starts.
-     */
-    // beforeTest: function (test, context) {
-    // },
-    /**
-     * Hook that gets executed _before_ a hook within the suite starts (e.g. runs before calling
-     * beforeEach in Mocha)
-     */
-    // beforeHook: function (test, context) {
-    // },
-    /**
-     * Hook that gets executed _after_ a hook within the suite starts (e.g. runs after calling
-     * afterEach in Mocha)
-     */
-    // afterHook: function (test, context, { error, result, duration, passed, retries }) {
-    // },
     /**
      * Function to be executed after a test (in Mocha/Jasmine only)
      * @param {Object}  test             test object
@@ -122,10 +104,6 @@ exports.config = {
      * @param {Boolean} result.passed    true if test has passed, otherwise false
      * @param {Object}  result.retries   informations to spec related retries, e.g. `{ attempts: 0, limit: 0 }`
      */
-    // afterTest: function(test, context, { error, result, duration, passed, retries }) {
-    // },
-
-
     /**
      * Hook that gets executed after the suite has ended
      * @param {Object} suite suite details
